@@ -6,40 +6,10 @@ import { baseApiUrl } from "./modules.mjs";
 import { rainyProdEndPoints } from "./modules.mjs";
 // Imported functions
 import { doFetchData } from "./modules.mjs";
+import { createCart } from "./modules.mjs";
+import { addToCart } from "./modules.mjs";
 
 //      ------- Working on -------
-
-// creating cart component
-function createCart() {
-  const cart = localStorage.getItem("cart");
-  if (!cart) {
-    localStorage.setItem("cart", JSON.stringify([]));
-    // console.log("if there isnt a cart add one");
-  }
-  // console.log("yabadabadu2");
-}
-//  adding to cart
-function addToCart(raincoat) {
-  console.log("addedToCart", raincoat);
-  const cart = JSON.parse(localStorage.getItem("cart"));
-  console.log(cart);
-  const prodIndex = cart.findIndex(function (currentProd) {
-    console.log("currentProd");
-    if (raincoat.id === raincoat.id) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-  if (prodIndex === -1) {
-    cart.push({ ...raincoat, quantity: 1 });
-  } else {
-    cart[prodIndex].quantity++;
-  }
-  console.log("prodIndex", prodIndex);
-  cart.push(raincoat);
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
 
 function genProdHtml(raincoat) {
   // console.log(raincoat);
