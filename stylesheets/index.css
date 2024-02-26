@@ -367,7 +367,9 @@ fieldset {
   /* on figma i have opposite coloring for the box shadow */
   box-shadow: 2px 4px 5px var(--blue-3);
 }
-
+.Filtering-bar {
+  display: flex;
+}
 .primary-button:hover {
   background-color: var(--blue-3);
   cursor: pointer;

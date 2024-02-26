@@ -27,8 +27,16 @@ export function createCart() {
     localStorage.setItem("cart", JSON.stringify([]));
   }
 }
+// function to return the stored cart
+export function returnCart() {
+  const cart = JSON.parse(localStorage.getItem("cart"));
+  return cart;
+}
+
 //  adding to cart
 export function addToCart(raincoat) {
+  // the function that returns my cart is not functioning..
+  // returnCart();
   console.log("addedToCart", raincoat);
   const cart = JSON.parse(localStorage.getItem("cart"));
   console.log(cart);

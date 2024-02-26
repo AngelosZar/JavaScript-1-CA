@@ -6,10 +6,9 @@ import { baseApiUrl } from "./modules.mjs";
 import { rainyProdEndPoints } from "./modules.mjs";
 // Imported functions
 import { doFetchData } from "./modules.mjs";
+import { returnCart } from "./modules.mjs";
 import { createCart } from "./modules.mjs";
 import { addToCart } from "./modules.mjs";
-
-//      ------- Working on -------
 
 function genProdHtml(raincoat) {
   // console.log(raincoat);
@@ -34,7 +33,7 @@ function genProdHtml(raincoat) {
   //                  insert image how?
   const productImg = document.createElement("img");
   // how to get the image????
-  // productImg.src = raincoat.image;
+  productImg.src = raincoat.image.url;
   // productImg.src = raincoat.image.url;
   //       ------- declaration from api -------
   // delete the Rainy days from the title
@@ -90,3 +89,13 @@ async function main() {
 }
 
 main();
+
+//      ------- Working on -------
+// const filterForHim = document.querySelector("#for-him");
+// const filterForHer = document.querySelector("#for-her");
+// let productByGender = " ";
+
+//      ------- Working on -------
+//  use for loop to loop throught all product .
+// if the value of gender is male add class or id of For him
+//                         else set value to 'for her' id or class
