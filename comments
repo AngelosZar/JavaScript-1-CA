@@ -35,3 +35,8 @@
 // don not sore
 // normally each time that we refresh the page on an online store our site should fetch the data again.(in case of product is added ,deleted ,sold out )
 // However we have apps like redis , that handles chashing .stored local data at yor browser and is fetching anly to check if the chased data is updated .Way faster approach
+
+
+
+split the main function into two like martin .
+render page and main page function to run everything.

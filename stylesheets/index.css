@@ -369,6 +369,11 @@ fieldset {
 }
 .Filtering-bar {
   display: flex;
+  flex-wrap: wrap;
+  margin: 3rem 1rem;
+}
+.Filtering-bar > button {
+  margin: 1rem;
 }
 .primary-button:hover {
   background-color: var(--blue-3);
